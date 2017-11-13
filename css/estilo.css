@@ -1,0 +1,131 @@
+    body{
+            width:50%;
+            background-image: url('../img/fondo.jpg');
+            background-size:cover;
+            background-repeat: no-repeat;
+        }
+        #menu{
+            width: 200px;
+            height: 200px;
+       		position: fixed;
+       		left:0%;
+            top: 50px;
+            transform: scale(0.2);
+         }
+
+         a{
+           display: block;
+           text-decoration: none;
+           color:white;
+           margin-top:40%;
+           text-align: center;
+         }
+
+         #menu div{
+            padding: 20px;
+            position: absolute;      
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 100%;
+            font-size: 10px;
+            font-weight: bold;
+            font-family:"Open Sans";
+         }
+
+       
+
+        #blanco{
+            z-index: 9998;
+        	background-color:#424242;
+            box-shadow: 4px 4px 4px 4px #151515;
+        }
+        #inicio{
+             z-index: 2;
+             visibility: hidden;
+        }
+
+        #galeria{
+        	z-index:3;
+           visibility: hidden;
+
+        }
+        #contacto{
+        	z-index: 4;
+            text-align:left; 
+
+        }
+        #contacto span{
+            display:block;
+            position: relative;
+            top:20px;
+        }
+        #donde{
+           z-index: 5;
+           visibility: hidden;
+
+        }
+        #menu:hover{
+            cursor:pointer;
+            transform: scale(0.6);
+        }
+
+        #menu:hover #blanco{
+            transform: scale(0.4);
+            opacity: 0.4;
+        }
+
+
+        #menu:hover #inicio{
+            background-image:linear-gradient(90deg, transparent 50%, #424242 50%);
+            transition:all 200ms;
+            visibility: visible;
+        	transform: translateX(80px);
+        }
+
+        #inicio span{
+            display:block;
+            position:relative;
+            left:25px;
+       }
+
+        #menu:hover #galeria{
+            background-image:linear-gradient(90deg, #424242 50%, transparent 50%);
+            visibility: visible;
+            transition: all 200ms ease-in-out;
+            transform: translateX(-80px);
+        }
+
+        #galeria span{
+            display:block;
+            position:relative;
+            right: 25px;
+       }
+
+        #menu:hover #contacto{
+            background-image:linear-gradient(0deg, #424242 50%, transparent 50%);
+            visibility: visible;
+            transition: all 200ms ease-in-out;
+            transform: translateY(80px);
+       }
+
+        #menu:hover #donde{
+            background-image:linear-gradient(180deg, #424242 50%, transparent 50%);    
+            visibility: visible;
+            transition: all 200ms ease-in-out;
+            transform: translateY(-80px);
+       }
+
+       #donde span{
+            display:block;
+            position:relative;
+            top:-14px;
+       }
+
+       #donde, #galeria, #inicio, #contacto{
+          transform: rotate(180deg);
+          transition: all 1ms ease-in-out;
+       }
+
+
+
